@@ -3,6 +3,8 @@ oci iam compartment create \
   --name "week1-training" \
   --description "Compartment for week 1 OCI training" \
   --compartment-id $(grep tenancy ~/.oci/config | awk -F'=' '{print $2}' | xargs)
+
+  
 --// command for compartment creation--//
 
 
