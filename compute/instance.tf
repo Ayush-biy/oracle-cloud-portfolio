@@ -16,7 +16,7 @@ resource "oci_core_instance" "vm_instance" {
   source_details {
     source_type = "image"
     source_id   = var.image_id
-  }
+    }
 
   display_name = var.hostname
 }
