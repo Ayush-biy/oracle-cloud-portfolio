@@ -11,4 +11,7 @@ variable "hostname" {}
 variable "image_id" {}
 variable "ssh_public_key_path" {}
 variable "instance_shape" {}
-
+variable "kms_key_id"{
+description = " ocid of the KMS key used to encrypt the boot volume"
+type = string
+}

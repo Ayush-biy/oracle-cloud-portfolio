@@ -16,4 +16,13 @@ provider "oci" {
   private_key_path = var.private_key_path
   region           = var.region
 }
+resource "oci_identity_policy" "kms_compute_policy" {
+  name           = "AllowComputeKMS"
+  description    = "Allow compute to use KMS key"
+  compartment_id = var.compartment_ocid
+  statements = [
+    "Allow service compute to use keys in compartment certification"
+  ]
+}
+
 
